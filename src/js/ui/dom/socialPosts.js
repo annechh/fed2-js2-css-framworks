@@ -28,14 +28,18 @@ export function buildSocialPostsCards(postData) {
   });
 
   const contentContainer = createDivElement({
-    className: ['social-posts-content', 'flex', 'flex-col', 'h-full'],
+    className: ['social-posts-content', 'flex', 'flex-col', 'h-full', 'w-full'],
   });
 
   const imageContainer = createDivElement({
     className: [
+      'flex',
+      'items-center',
+      'justify-center',
       'w-full',
-      'h-60',
-      'sm:h-80',
+      'max-h-60',
+      'sm:max-h-80',
+      'h-full',
       'cursor-pointer',
       'hover:drop-shadow-white',
       'overflow-hidden',
@@ -64,8 +68,6 @@ export function buildSocialPostsCards(postData) {
       'flex-col',
       'justify-between',
       'max-h-40',
-      'md:max-h-44',
-      'lg:max-h-52',
       'h-full',
     ],
     id: 'cardTextContainer',
@@ -105,7 +107,7 @@ export function buildSocialPostsCards(postData) {
   const authorAvatar = createImageElement({
     src: postData.author.avatar.url,
     alt: postData.author.avatar.alt,
-    // className: ['max-h-full'],
+    className: ['h-full', 'w-full', 'object-cover'],
   });
 
   const authorName = document.createElement('span');
