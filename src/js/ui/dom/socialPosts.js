@@ -130,16 +130,16 @@ export function buildSocialPostsCards(postData) {
     textContent: postData.title,
   });
 
-  const postText = createElementParagraph({
-    className: [
-      'pt-2',
-      'px-4',
-      'overflow-hidden',
-      'line-clamp-1',
-      'md:line-clamp-3',
-    ],
-    textContent: postData.body,
-  });
+  // const postText = createElementParagraph({
+  //   className: [
+  //     'pt-2',
+  //     'px-4',
+  //     'overflow-hidden',
+  //     'line-clamp-1',
+  //     'md:line-clamp-3',
+  //   ],
+  //   textContent: postData.body,
+  // });
 
   const reactCommentContainer = createDivElement({
     className: ['flex', 'justify-between', 'items-center', 'mx-4', 'pt-2'],
@@ -174,7 +174,7 @@ export function buildSocialPostsCards(postData) {
 
   textContainer.append(
     authorDateTitleContainer,
-    postText,
+    // postText,
     reactCommentContainer
   );
   contentContainer.append(imageContainer, textContainer);
