@@ -127,7 +127,7 @@ export function buildSocialPostsCards(postData) {
     ${formattedDate.getFullYear()}`;
 
   const postTitle = createHeadingElement({
-    className: ['text-base', 'font-bold', 'px-4', 'pt-2'],
+    className: ['text-base', 'font-bold', 'mx-4', 'pt-2', 'overflow-hidden'],
     htmlElement: 'h2',
     textContent: postData.title,
   });
