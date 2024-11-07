@@ -11,49 +11,58 @@
     <title>Register - CSS frameworks CA</title>
   </head>
 
-  <body class="text-white bg-purpleDark">
+  <body class="text-white bg-purpleDark flex flex-col items-center min-h-screen">
     <header class="bg-purpleLight md:h-20 h-12 flex flex-col justify-center items-center px-4 md:px-8 w-full"></header>
-    <h1>Register</h1>
 
-    <form name="register">
-      <div>
-        <label for="name">Name</label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-          required
-          maxlength="20"
-          pattern="^[\w]+$"
-          title="Please enter a username using only letters and numbers"
-        />
+    <main class="flex flex-grow w-full justify-center items-center">
+      <div class="bg-purpleLight h-[500px] md:h-[600px] max-w-[800px] w-full flex flex-col gap-5 justify-center items-center rounded-xl mx-4">
+        <h1 class="text-center text-xl sm:text-2xl md:text-3xl font-semibold px-4">Register</h1>
+        
+        <form class="flex flex-col gap-4 max-w-sm md:max-w-lg w-full" name="register">
+          <div class="flex flex-col gap-2 mx-[10px]">
+            <label for="name">Name</label>
+            <input class="rounded h-12 px-4 text-purpleDark font-semibold"
+              id="name"
+              type="text"
+              name="name"
+              required
+              maxlength="20"
+              pattern="^[\w]+$"
+              title="Please enter a username using only letters and numbers"
+            />
+          </div>
+    
+          <div class="flex flex-col gap-2 mx-[10px]">
+            <label for="email">Email</label>
+            <input class="rounded h-12 px-4 text-purpleDark font-semibold"
+              id="email"
+              type="email"
+              name="email"
+              required
+              pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
+              title="Please enter a valid @noroff.no or @stud.noroff.no address"
+            />
+          </div>
+    
+          <div class="flex flex-col gap-2 mx-[10px]">
+            <label for="password">Password</label>
+            <input class="rounded h-12 px-4 text-purpleDark font-semibold"
+              type="password"
+              name="password"
+              id="password"
+              required
+              minlength="8"
+            />
+          </div>
+    
+          <button class="btn-darkPurple mx-[10px] mt-4">Register</button>
+          <a class="btn-white mx-[10px] text-center" href="/auth/login/">Login</a>
+        </form>
       </div>
+    </main>
 
-      <div>
-        <label for="email">Email</label>
-        <input
-          id="email"
-          type="email"
-          name="email"
-          required
-          pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
-          title="Please enter a valid @noroff.no or @stud.noroff.no address"
-        />
-      </div>
 
-      <div>
-        <label for="password">Password</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          required
-          minlength="8"
-        />
-      </div>
+    <footer class="bg-purpleLight h-16 w-full  "></footer>
 
-      <a href="/auth/login/">Login</a>
-      <button>Register</button>
-    </form>
   </body>
 </html>
