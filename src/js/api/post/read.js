@@ -72,7 +72,7 @@ export async function readSinglePost() {
  */
 
 function buildQueryParams(
-  limit = 100,
+  limit = 12,
   page = 1,
   tag,
   _author,
