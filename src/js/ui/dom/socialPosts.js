@@ -28,7 +28,13 @@ export function buildSocialPostsCards(postData) {
   });
 
   const contentContainer = createDivElement({
-    className: ['social-posts-content', 'flex', 'flex-col', 'h-full', 'w-full'],
+    className: [
+      'social-posts-content',
+      'flex',
+      'flex-col',
+      'sm:h-full',
+      'sm:w-full',
+    ],
   });
 
   const imageContainer = createDivElement({
