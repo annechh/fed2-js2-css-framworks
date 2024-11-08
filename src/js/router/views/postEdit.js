@@ -3,6 +3,7 @@ import { setLogoutListener } from '../../ui/global/logout';
 import { onUpdatePost } from '../../ui/post/update';
 import { readSinglePost } from '../../api/post/read';
 import { buildNavBar } from '../../ui/dom/nav';
+import { darkLightModes } from '../../ui/global/darkLightMode';
 
 /**
  * Fetches the data for a single post and populates the form fields with the retrieved information.
@@ -47,4 +48,5 @@ form.addEventListener('submit', onUpdatePost);
 buildNavBar();
 setLogoutListener();
 authGuard();
+darkLightModes();
 await viewFormData();

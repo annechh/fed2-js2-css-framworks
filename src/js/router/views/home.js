@@ -3,6 +3,7 @@ import { authGuard } from '../../utilities/authGuard';
 import { buildNavBar } from '../../ui/dom/nav';
 import { mobileFooter } from '../../ui/dom/footer';
 import { loadPosts } from '../../utilities/pagination';
+import { darkLightModes } from '../../ui/global/darkLightMode';
 
 /**
  * @description
@@ -26,6 +27,7 @@ async function loadHomePage() {
   buildNavBar();
   setLogoutListener();
   mobileFooter();
+  darkLightModes();
 }
 
 loadHomePage();

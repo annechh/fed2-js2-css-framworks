@@ -2,6 +2,7 @@ import { onCreatePost } from '../../ui/post/create';
 import { authGuard } from '../../utilities/authGuard';
 import { setLogoutListener } from '../../ui/global/logout';
 import { buildNavBar } from '../../ui/dom/nav';
+import { darkLightModes } from '../../ui/global/darkLightMode';
 
 /**
  * Adds event listener to the create post form to handle form submission.
@@ -18,3 +19,4 @@ form.addEventListener('submit', onCreatePost);
 buildNavBar();
 setLogoutListener();
 authGuard();
+darkLightModes();

@@ -1,5 +1,6 @@
 import { onRegister } from '../../ui/auth/register';
 import { buildNavBar } from '../../ui/dom/nav';
+import { darkLightModes } from '../../ui/global/darkLightMode';
 
 /**
  * Adds event listener to the register form to handle form submission.
@@ -14,3 +15,4 @@ const form = document.forms.register;
 form.addEventListener('submit', onRegister);
 
 buildNavBar();
+darkLightModes();

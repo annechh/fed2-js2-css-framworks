@@ -2,6 +2,7 @@ import { buildSinglePost } from '../../ui/dom/singlePost';
 import { readSinglePost } from '../../api/post/read';
 import { setLogoutListener } from '../../ui/global/logout';
 import { buildNavBar } from '../../ui/dom/nav';
+import { darkLightModes } from '../../ui/global/darkLightMode';
 
 /**
  *
@@ -25,3 +26,4 @@ async function loadSinglePost() {
 buildNavBar();
 loadSinglePost();
 setLogoutListener();
+darkLightModes();

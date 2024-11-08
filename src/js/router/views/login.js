@@ -1,5 +1,6 @@
 import { onLogin } from '../../ui/auth/login';
 import { buildNavBar } from '../../ui/dom/nav';
+import { darkLightModes } from '../../ui/global/darkLightMode';
 
 /**
  * Adds event listener to the login form to handle form submission.
@@ -14,3 +15,4 @@ const form = document.forms.login;
 form.addEventListener('submit', onLogin);
 
 buildNavBar();
+darkLightModes();
