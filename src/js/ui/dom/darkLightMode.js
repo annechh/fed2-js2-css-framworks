@@ -1,0 +1,60 @@
+export function buildDarkLightToggle() {
+  const toggleLabel = document.createElement('label');
+  toggleLabel.setAttribute('for', 'light-mode');
+  toggleLabel.classList.add(
+    'relative',
+    'inline-flex',
+    'items-center',
+    'justify-center',
+    'cursor-pointer'
+  );
+
+  const toggleInput = document.createElement('input');
+  toggleInput.setAttribute('type', 'checkbox');
+  toggleInput.id = 'light-mode';
+  toggleInput.classList.add('sr-only', 'light-mode', 'toggle-input');
+
+  const toggleSpan1 = document.createElement('span');
+  toggleSpan1.classList.add(
+    'w-10',
+    'h-10',
+    'bg-purpleDark',
+    'dark:bg-red-600',
+    'rounded-full',
+    'shadow-inner'
+  );
+
+  const toggleSpan2 = document.createElement('span');
+  toggleSpan2.classList.add(
+    'absolute',
+    'w-8',
+    'h-8',
+    'bg-purpleLight',
+    'dark:bg-gray-800',
+    'rounded-full',
+    'transition-transform',
+    'transform',
+    'checked:translate-x-5',
+    'flex',
+    'items-center',
+    'justify-center'
+  );
+
+  const toggleIcon = document.createElement('i');
+  toggleIcon.classList.add('fa-solid', 'fa-moon', 'text-white', 'text-xl');
+
+  toggleInput.addEventListener('change', () => {
+    if (toggleInput.checked) {
+      console.log('Changing icon to sun');
+      toggleIcon.classList.replace('fa-moon', 'fa-sun');
+    } else {
+      console.log('Changing icon to moon');
+      toggleIcon.classList.replace('fa-sun', 'fa-moon');
+    }
+  });
+
+  toggleSpan2.appendChild(toggleIcon);
+  toggleLabel.append(toggleInput, toggleSpan1, toggleSpan2);
+
+  return toggleLabel;
+}
