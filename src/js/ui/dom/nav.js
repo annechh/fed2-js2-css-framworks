@@ -1,4 +1,5 @@
 import { DISPLAY_BLOCK, DISPLAY_NONE } from '../../api/constants';
+import { buildDarkLightToggle } from './darkLightMode';
 import {
   createImageElement,
   createElementHref,
@@ -8,6 +9,15 @@ import {
 
 export function buildNavBar() {
   const header = document.querySelector('header');
+
+  const toggleContainer = createDivElement({
+    className: ['flex', 'items-center', 'space-x-2', 'm-5'],
+    id: 'darkLightToggle',
+  });
+
+  const toggleDarkLight = buildDarkLightToggle();
+
+  toggleContainer.append(toggleDarkLight);
 
   const nav = document.createElement('nav');
   nav.classList.add(
@@ -32,6 +42,10 @@ export function buildNavBar() {
   });
   logo.addEventListener('click', () => (window.location.href = '/'));
 
+  const menuContainer = createDivElement({
+    className: ['flex', 'items-center'],
+  });
+
   const ul = document.createElement('ul');
   ul.classList.add('hidden', 'md:flex', 'gap-4');
 
@@ -39,9 +53,10 @@ export function buildNavBar() {
   burgerMenu.classList.add(
     'fa-solid',
     'fa-bars',
-    'fa-lg',
+    'fa-2xl',
     'text-white',
-    'md:hidden'
+    'md:hidden',
+    'cursor-pointer'
   );
   burgerMenu.addEventListener('click', () => {
     dropdownMenu.classList.toggle('hidden');
@@ -57,7 +72,7 @@ export function buildNavBar() {
     className: [
       'absolute',
       'hidden',
-      'top-12',
+      'top-16',
       'left-0',
       'w-full',
       'bg-purpleDark',
@@ -161,6 +176,7 @@ export function buildNavBar() {
     registerButton.cloneNode(true)
   );
   ul.append(home, create, profile, logoutButton, loginButton, registerButton);
-  nav.append(logo, ul, burgerMenu);
+  menuContainer.append(toggleContainer, ul, burgerMenu);
+  nav.append(logo, menuContainer);
   header.append(nav);
 }
