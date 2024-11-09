@@ -111,33 +111,21 @@ export function buildNavBar() {
   const home = createElementHref({
     href: '/',
     textContent: 'Home',
-    className: [
-      'md:hover:text-purpleDark',
-      'md:hover:border-purpleDark',
-      ...getPageClasses('/'),
-    ],
+    className: ['md:hover:underline', ...getPageClasses('/')],
   });
   home.style.display = DISPLAY_BLOCK;
 
   const create = createElementHref({
     href: '/post/create/',
     textContent: 'Create Post',
-    className: [
-      'md:hover:text-purpleDark',
-      'md:hover:border-purpleDark',
-      ...getPageClasses('/post/create/'),
-    ],
+    className: ['md:hover:underline', ...getPageClasses('/post/create/')],
   });
   create.style.display = DISPLAY_BLOCK;
 
   const profile = createElementHref({
     href: '/profile/',
     textContent: 'Profile',
-    className: [
-      'md:hover:text-purpleDark',
-      'md:hover:border-purpleDark',
-      ...getPageClasses('/profile/'),
-    ],
+    className: ['md:hover:underline', ...getPageClasses('/profile/')],
   });
   profile.style.display = DISPLAY_BLOCK;
 
@@ -145,7 +133,7 @@ export function buildNavBar() {
     id: 'loginButton',
     className: 'nav-btn',
     textContent: 'Login',
-    className: ['md:hover:text-purpleDark'],
+    className: ['md:hover:underline', ...getPageClasses('/auth/login/')],
   });
   loginButton.addEventListener('click', () => {
     window.location.href = '/auth/login/';
@@ -156,7 +144,7 @@ export function buildNavBar() {
     id: 'logoutButton',
     className: 'nav-btn',
     textContent: 'Logout',
-    className: ['md:hover:text-purpleDark'],
+    className: ['md:hover:underline'],
   });
   logoutButton.style.display = DISPLAY_BLOCK;
 
@@ -164,7 +152,7 @@ export function buildNavBar() {
     id: 'mobileLogoutButton',
     className: 'nav-btn',
     textContent: 'Logout',
-    className: ['md:hover:text-purpleDark'],
+    className: ['md:hover:underline'],
   });
   mobileLogoutButton.style.display = DISPLAY_BLOCK;
 
@@ -172,7 +160,7 @@ export function buildNavBar() {
     id: 'registerButton',
     className: 'nav-btn',
     textContent: 'Register',
-    className: ['md:hover:text-purpleDark'],
+    className: ['md:hover:underline', ...getPageClasses('/auth/register/')],
   });
   registerButton.addEventListener('click', () => {
     window.location.href = '/auth/register/';
