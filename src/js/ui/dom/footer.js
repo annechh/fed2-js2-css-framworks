@@ -12,3 +12,17 @@ export function mobileFooter() {
     }
   });
 }
+
+export function footerStyle() {
+  const footerClasses = document.querySelector('.footer');
+  footerClasses.classList.add(
+    'bg-purpleLight',
+    'dark:bg-violetLight',
+    'h-16',
+    'w-full',
+    'mt-10'
+    // 'fixed',
+    // 'bottom-0',
+    // 'hidden'
+  );
+}
