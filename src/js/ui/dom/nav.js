@@ -89,6 +89,7 @@ export function buildNavBar() {
       'left-0',
       'w-full',
       'bg-purpleDark',
+      'dark:bg-violet',
       'text-white',
       'py-12',
       'font-sans',
