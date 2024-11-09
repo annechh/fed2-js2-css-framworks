@@ -40,13 +40,7 @@ export function buildDarkLightToggle() {
   );
 
   const toggleIcon = document.createElement('i');
-  toggleIcon.classList.add(
-    'fa-solid',
-    'fa-moon',
-    'text-purpleDark',
-    'dark:text-white',
-    'text-2xl'
-  );
+  toggleIcon.classList.add('fa-solid', 'fa-moon', 'text-white', 'text-2xl');
 
   if (localStorage.getItem('icon-sun') === 'true') {
     toggleIcon.classList.replace('fa-moon', 'fa-sun');
