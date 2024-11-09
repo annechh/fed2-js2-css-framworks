@@ -20,3 +20,6 @@
   @apply bg-black hover:bg-red-700 text-white md:font-bold md:text-lg px-4 py-2 md:px-8 md:py-4 rounded-full;
 }
 
+.auth-link {
+  @apply text-center px-4 py-2 md:px-8 md:py-4 hover:underline
+}
