@@ -18,19 +18,18 @@ export function buildDarkLightToggle() {
   toggleSpan1.classList.add(
     'w-10',
     'h-10',
-    'bg-purpleDark',
-    'dark:bg-red-600',
-    'rounded-full',
-    'shadow-inner'
+    // 'bg-purpleDark',
+    // 'dark:bg-red-600',
+    'rounded-full'
   );
 
   const toggleSpan2 = document.createElement('span');
   toggleSpan2.classList.add(
     'absolute',
-    'w-8',
-    'h-8',
-    'bg-purpleLight',
-    'dark:bg-gray-800',
+    'w-9',
+    'h-9',
+    // 'bg-purpleLight',
+    // 'dark:bg-white',
     'rounded-full',
     'transition-transform',
     'transform',
@@ -41,7 +40,13 @@ export function buildDarkLightToggle() {
   );
 
   const toggleIcon = document.createElement('i');
-  toggleIcon.classList.add('fa-solid', 'fa-moon', 'text-white', 'text-xl');
+  toggleIcon.classList.add(
+    'fa-solid',
+    'fa-moon',
+    'text-purpleDark',
+    'dark:text-white',
+    'text-2xl'
+  );
 
   toggleInput.addEventListener('change', () => {
     if (toggleInput.checked) {
