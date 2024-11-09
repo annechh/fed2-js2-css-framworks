@@ -9,6 +9,19 @@ import {
 
 export function buildNavBar() {
   const header = document.querySelector('header');
+  header.classList.add(
+    'bg-purpleLight',
+    'dark:bg-violet',
+    'md:h-20',
+    'h-16',
+    'flex',
+    'flex-col',
+    'justify-center',
+    'items-center',
+    'px-4',
+    'md:px-8',
+    'w-full'
+  );
 
   const toggleContainer = createDivElement({
     className: ['flex', 'items-center', 'space-x-2', 'm-5'],
