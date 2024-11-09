@@ -3,6 +3,7 @@ import { readSinglePost } from '../../api/post/read';
 import { setLogoutListener } from '../../ui/global/logout';
 import { buildNavBar } from '../../ui/dom/nav';
 import { darkLightModes } from '../../ui/global/darkLightMode';
+import { footerStyle } from '../../ui/dom/footer';
 
 /**
  *
@@ -27,3 +28,4 @@ buildNavBar();
 loadSinglePost();
 setLogoutListener();
 darkLightModes();
+footerStyle();

@@ -1,5 +1,7 @@
 import { onLogin } from '../../ui/auth/login';
+import { footerStyle } from '../../ui/dom/footer';
 import { buildNavBar } from '../../ui/dom/nav';
+import { formStyle, labelInputDivStyle } from '../../ui/dom/styleElements';
 import { darkLightModes } from '../../ui/global/darkLightMode';
 
 /**
@@ -16,3 +18,6 @@ form.addEventListener('submit', onLogin);
 
 buildNavBar();
 darkLightModes();
+footerStyle();
+formStyle();
+labelInputDivStyle();

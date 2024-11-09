@@ -1,3 +1,4 @@
+import { footerStyle } from '../../ui/dom/footer';
 import { buildNavBar } from '../../ui/dom/nav';
 import { darkLightModes } from '../../ui/global/darkLightMode';
 import { setLogoutListener } from '../../ui/global/logout';
@@ -7,3 +8,4 @@ buildNavBar();
 setLogoutListener();
 authGuard();
 darkLightModes();
+footerStyle();
