@@ -9,7 +9,7 @@ export default {
         purpleLight: '#311C36',
         white: '#d9d9d9',
         greyLight: '#9A9A9A',
-        violet: '#5B4B5C',
+        violet: '#4B3B4C',
         whiteFaded: 'rgba(217, 217, 217, 0.25)',
       },
       dropShadow: {
