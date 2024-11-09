@@ -48,12 +48,20 @@ export function buildDarkLightToggle() {
     'text-2xl'
   );
 
+  if (localStorage.getItem('icon-sun') === 'true') {
+    toggleIcon.classList.replace('fa-moon', 'fa-sun');
+  } else {
+    toggleIcon.classList.replace('fa-sun', 'fa-moon');
+  }
+
   toggleInput.addEventListener('change', () => {
     if (toggleInput.checked) {
       console.log('Changing icon to sun');
+      localStorage.setItem('icon-sun', true);
       toggleIcon.classList.replace('fa-moon', 'fa-sun');
     } else {
       console.log('Changing icon to moon');
+      localStorage.setItem('icon-sun', 'false');
       toggleIcon.classList.replace('fa-sun', 'fa-moon');
     }
   });
