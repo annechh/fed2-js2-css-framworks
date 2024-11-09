@@ -11,7 +11,7 @@ export function buildNavBar() {
   const header = document.querySelector('header');
   header.classList.add(
     'bg-purpleLight',
-    'dark:bg-violet',
+    'dark:bg-violetLight',
     'md:h-20',
     'h-16',
     'flex',
@@ -89,7 +89,7 @@ export function buildNavBar() {
       'left-0',
       'w-full',
       'bg-purpleDark',
-      'dark:bg-violet',
+      'dark:bg-violetLight',
       'text-white',
       'py-12',
       'font-sans',
