@@ -24,7 +24,7 @@ export function buildNavBar() {
   );
 
   const toggleContainer = createDivElement({
-    className: ['flex', 'items-center', 'space-x-2', 'm-5'],
+    className: ['flex', 'items-center', 'space-x-2', 'mr-5'],
     id: 'darkLightToggle',
   });
 
@@ -66,7 +66,7 @@ export function buildNavBar() {
   burgerMenu.classList.add(
     'fa-solid',
     'fa-bars',
-    'fa-2xl',
+    'text-3xl',
     'text-white',
     'md:hidden',
     'cursor-pointer'
