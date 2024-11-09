@@ -5,11 +5,14 @@
 @tailwind utilities;
 
 .btn-lightPurple {
-  @apply bg-purpleLight hover:bg-green-700  text-white md:font-bold md:text-lg px-4 py-2 md:px-8 md:py-4 rounded-full;
+  @apply bg-purpleLight hover:bg-green-700  text-white font-bold md:text-lg px-4 py-2 md:px-8 md:py-4 rounded-full;
 }
 
 .btn-darkPurple {
-  @apply bg-purpleDark hover:bg-green-700 hover:text-purpleDark text-white md:font-bold md:text-lg px-4 py-2 md:px-8 md:py-4 rounded-full;
+  @apply 
+  bg-purpleDark hover:bg-green-700 hover:text-purpleDark  text-white
+  dark:bg-violetDark dark:text-white hover:dark:bg-green-700 
+    font-bold md:text-lg px-4 py-2 md:px-8 md:py-4 rounded-full;
 }
 
 .btn-white {
