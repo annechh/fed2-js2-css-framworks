@@ -61,6 +61,7 @@ export function buildSinglePost(postData) {
       'font-bold',
       'max-w-[800px]',
       'dark:text-black',
+      'break-all',
     ],
     htmlElement: 'h1',
     textContent: postData.title,
@@ -79,6 +80,7 @@ export function buildSinglePost(postData) {
       'dark:border-blackFaded',
       'pb-2',
       'dark:text-black',
+      'break-all',
     ],
     textContent: postData.body,
   });
