@@ -1,7 +1,7 @@
 import { setLogoutListener } from '../../ui/global/logout';
 import { authGuard } from '../../utilities/authGuard';
 import { buildNavBar } from '../../ui/dom/nav';
-import { footerStyle, mobileFooter } from '../../ui/dom/footer';
+import { footerStyle } from '../../ui/dom/footer';
 import { loadPosts } from '../../utilities/pagination';
 import { darkLightModes } from '../../ui/global/darkLightMode';
 
@@ -26,7 +26,6 @@ async function loadHomePage() {
   await loadPosts();
   buildNavBar();
   setLogoutListener();
-  mobileFooter();
   darkLightModes();
   footerStyle();
 }
