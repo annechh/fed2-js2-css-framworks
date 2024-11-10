@@ -39,6 +39,7 @@ export function buildSocialPostsCards(postData) {
 
   const imageContainer = createDivElement({
     className: [
+      'image-container',
       'flex',
       'items-center',
       'justify-center',
@@ -101,13 +102,14 @@ export function buildSocialPostsCards(postData) {
 
   const avatarImageContainer = createDivElement({
     className: [
-      'max-h-6',
-      'max-w-6',
-      'rounded-full',
-      'overflow-hidden',
       'flex',
       'flex-center',
       'items-center',
+      'h-6',
+      'w-6',
+      'rounded-full',
+      'overflow-hidden',
+      'aspect-square',
     ],
   });
 
@@ -146,17 +148,6 @@ export function buildSocialPostsCards(postData) {
     textContent: postData.title,
   });
 
-  // const postText = createElementParagraph({
-  //   className: [
-  //     'pt-2',
-  //     'px-4',
-  //     'overflow-hidden',
-  //     'line-clamp-1',
-  //     'md:line-clamp-3',
-  //   ],
-  //   textContent: postData.body,
-  // });
-
   const reactCommentContainer = createDivElement({
     className: ['flex', 'justify-between', 'items-center', 'mx-4', 'pt-2'],
   });
@@ -188,11 +179,7 @@ export function buildSocialPostsCards(postData) {
   authorDateTitleContainer.append(authorDateContainer, postTitle);
   reactCommentContainer.append(reactEmoji, commentsIcon);
 
-  textContainer.append(
-    authorDateTitleContainer,
-    // postText,
-    reactCommentContainer
-  );
+  textContainer.append(authorDateTitleContainer, reactCommentContainer);
   contentContainer.append(imageContainer, textContainer);
   postCard.append(contentContainer);
 

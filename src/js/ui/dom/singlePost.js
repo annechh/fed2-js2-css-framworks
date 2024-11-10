@@ -43,23 +43,37 @@ export function buildSinglePost(postData) {
   });
 
   const textInnerContainer = createDivElement({
-    className: ['flex', 'flex-col', 'gap-5', 'items-center', 'mx-4'],
+    className: [
+      'flex',
+      'flex-col',
+      'items-start',
+      'gap-5',
+      'items-center',
+      'mx-4',
+    ],
   });
 
   const postTitle = createHeadingElement({
-    className: ['w-full', 'text-xl', 'max-w-[800px]'],
-    htmlElement: 'h2',
+    className: [
+      'w-full',
+      'text-xl',
+      'md:text-3xl',
+      'font-bold',
+      'max-w-[800px]',
+      'dark:text-black',
+    ],
+    htmlElement: 'h1',
     textContent: postData.title,
   });
 
   const textAuthorContainer = createDivElement({
-    className: ['max-w-[800px]'],
+    className: ['max-w-[800px]', 'w-full'],
   });
 
   const postText = createElementParagraph({
     className: [
       'text-base',
-      'md:text-lg',
+      'md:text-xl',
       'border-b',
       'border-whiteFaded',
       'dark:border-blackFaded',
@@ -70,7 +84,14 @@ export function buildSinglePost(postData) {
   });
   const postAuthor = createElementParagraph({
     textContent: 'Post by: ' + postData.author.name,
-    className: ['w-full', 'italic', 'pt-2', 'text-xs'],
+    className: [
+      'w-full',
+      'italic',
+      'pt-2',
+      'text-xs',
+      'md:text-sm',
+      'dark:text-black',
+    ],
   });
 
   const postTags = createElementParagraph({
