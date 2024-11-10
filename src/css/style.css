@@ -6,9 +6,8 @@
 
 .btn-lightPurple {
   @apply 
-  bg-purpleLight dark:bg-violetLight 
   text-white 
-  /* active:text-white active:dark:text-white */
+  bg-purpleLight dark:bg-violetLight 
   active:bg-green-700  active:dark:bg-green-700
   md:hover:bg-green-700 md:hover:dark:bg-green-700
   font-bold md:text-lg px-4 py-2 md:px-8 md:py-4 rounded-full;
@@ -16,20 +15,23 @@
 
 .btn-darkPurple {
   @apply 
-  bg-purpleDark dark:bg-violetDark
   text-white
+  bg-purpleDark dark:bg-violetDark
   active:bg-green-700 active:text-black 
   md:hover:bg-green-700 md:hover:dark:bg-green-700 md:hover:text-purpleDark
-  
   font-bold md:text-lg px-4 py-2 md:px-8 md:py-4 rounded-full;
 }
 
 .btn-delete {
   @apply 
-  bg-black md:hover:bg-red-700 text-white
+  text-white
+  bg-black 
+  md:hover:bg-red-700 
   active:bg-red-700 active:dark:bg-red-700
   md:font-bold md:text-lg px-4 py-2 md:px-8 md:py-4 rounded-full;
 }
+
+
 
 .btn-pagination{
   @apply 
