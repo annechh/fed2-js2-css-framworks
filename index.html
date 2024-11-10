@@ -12,28 +12,31 @@
   <title>Home - CSS frameworks CA</title>
 </head>
 
-<body class="text-white bg-purpleDark dark:bg-white flex flex-col items-center">
+<body class="text-white bg-purpleDark dark:bg-white flex flex-col items-center min-h-screen">
 
   <header></header>
-
-  <h1 class="my-10 dark:text-black">Home</h1>
-
-  <span class="loader" id="loader"></span>
-
-  <div id="posts" class="max-w-7xl grid sm:grid-cols-2 lg:grid-cols-3 gap-[10px] mx-4 md:mx-8 "></div>
-
-  <div class="pagination flex max-w-72 md:max-w-80 w-full justify-between mt-10 gap-3">
-    <div class="flex justify-between w-1/2">
-      <button class="btn bg-purpleLight dark:bg-violetLight py-2 px-3 rounded-full whitespace-nowrap text-xs md:text-base dark:hover:bg-violetDark hover:bg-white dark:text-white " id="paginationFirstPage">First Page</button>
-      <button class="btn bg-purpleLight dark:bg-violetLight py-2 px-3 rounded-full whitespace-nowrap text-xs md:text-base dark:hover:bg-violetDark hover:bg-white dark:text-white " id="paginationBack">Back</button>
-    </div>
-    <div class="flex justify-between w-1/2">
-      <button class="btn bg-purpleLight dark:bg-violetLight py-2 px-3 rounded-full whitespace-nowrap text-xs md:text-base dark:hover:bg-violetDark hover:bg-white dark:text-white " id="paginationNext">Next</button>
-      <button class="btn bg-purpleLight dark:bg-violetLight py-2 px-3 rounded-full whitespace-nowrap text-xs md:text-base dark:hover:bg-violetDark hover:bg-white dark:text-white " id="paginationLastPage">Last Page</button>
-    </div>
-  </div>
+  <main class="flex flex-grow w-full justify-center items-center my-10 ">
+    <div class="flex flex-col items-center">
+      <h1 class="mb-10 dark:text-black">Home</h1>
   
-  <div class="text-xs mt-3 mb-10 dark:text-black" id="pageInfo"></div>
+      <span class="loader" id="loader"></span>
+    
+      <div id="posts" class="max-w-7xl grid sm:grid-cols-2 lg:grid-cols-3 gap-[10px] mx-4 md:mx-8 "></div>
+    
+      <div class="pagination flex max-w-72 md:max-w-80 w-full justify-between mt-10 gap-3">
+        <div class="flex justify-between w-1/2">
+          <button class="btn bg-purpleLight dark:bg-violetLight py-2 px-3 rounded-full whitespace-nowrap text-xs md:text-base dark:hover:bg-violetDark hover:bg-white dark:text-white " id="paginationFirstPage">First Page</button>
+          <button class="btn bg-purpleLight dark:bg-violetLight py-2 px-3 rounded-full whitespace-nowrap text-xs md:text-base dark:hover:bg-violetDark hover:bg-white dark:text-white " id="paginationBack">Back</button>
+        </div>
+        <div class="flex justify-between w-1/2">
+          <button class="btn bg-purpleLight dark:bg-violetLight py-2 px-3 rounded-full whitespace-nowrap text-xs md:text-base dark:hover:bg-violetDark hover:bg-white dark:text-white " id="paginationNext">Next</button>
+          <button class="btn bg-purpleLight dark:bg-violetLight py-2 px-3 rounded-full whitespace-nowrap text-xs md:text-base dark:hover:bg-violetDark hover:bg-white dark:text-white " id="paginationLastPage">Last Page</button>
+        </div>
+      </div>
+      
+      <div class="text-xs mt-3 dark:text-black" id="pageInfo"></div>
+    </div>
+  </main>
 
   <footer class="footer" id="mobileFooter"></footer>
 

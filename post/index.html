@@ -13,12 +13,13 @@
   <body class="text-white bg-purpleDark dark:bg-white w-screen min-h-screen flex flex-col">
     <header></header>
 
-    <main class="flex flex-col items-center">
-      <h1 class="my-5 md:my-10 md:text-2xl font-semibold dark:text-black" id="postTitle" ></h1>
-
-      <span class="loader" id="loader"></span>
+    <main class="flex flex-grow w-full justify-center items-center my-10">
+      <div class="flex flex-col items-center">
   
-      <div class="flex flex-col items-center max-w-[1280px] gap-5" id="post"></div>      
+        <span class="loader" id="loader"></span>
+    
+        <div class="flex flex-col items-center max-w-[1280px] gap-5" id="post"></div>      
+      </div>
     </main>
 
     <footer class="footer"></footer>
