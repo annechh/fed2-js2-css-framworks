@@ -148,14 +148,6 @@ export function buildNavBar() {
   });
   logoutButton.style.display = DISPLAY_BLOCK;
 
-  const mobileLogoutButton = createElementButton({
-    id: 'mobileLogoutButton',
-    className: 'nav-btn',
-    textContent: 'Logout',
-    className: ['md:hover:underline'],
-  });
-  mobileLogoutButton.style.display = DISPLAY_BLOCK;
-
   const registerButton = createElementButton({
     id: 'registerButton',
     className: 'nav-btn',
@@ -167,15 +159,44 @@ export function buildNavBar() {
   });
   registerButton.style.display = DISPLAY_NONE;
 
-  burgerMenu.append(dropdownMenu);
+  const mobileLoginButton = createElementButton({
+    id: 'mobileLoginButton',
+    className: 'nav-btn',
+    textContent: 'Login',
+    className: ['md:hover:underline', ...getPageClasses('/auth/login/')],
+  });
+  mobileLoginButton.addEventListener('click', () => {
+    window.location.href = '/auth/login/';
+  });
+  mobileLoginButton.style.display = DISPLAY_NONE;
 
+  const mobileLogoutButton = createElementButton({
+    id: 'mobileLogoutButton',
+    className: 'nav-btn',
+    textContent: 'Logout',
+    className: ['md:hover:underline'],
+  });
+  mobileLogoutButton.style.display = DISPLAY_BLOCK;
+
+  const mobileRegisterButton = createElementButton({
+    id: 'mobileRegisterButton',
+    className: 'nav-btn',
+    textContent: 'Register',
+    className: ['md:hover:underline', ...getPageClasses('/auth/register/')],
+  });
+  mobileRegisterButton.addEventListener('click', () => {
+    window.location.href = '/auth/register/';
+  });
+  mobileRegisterButton.style.display = DISPLAY_NONE;
+
+  burgerMenu.append(dropdownMenu);
   dropdownMenu.append(
     home.cloneNode(true),
     create.cloneNode(true),
     profile.cloneNode(true),
-    loginButton.cloneNode(true),
+    mobileLoginButton,
     mobileLogoutButton,
-    registerButton.cloneNode(true)
+    mobileRegisterButton
   );
   ul.append(home, create, profile, logoutButton, loginButton, registerButton);
   menuContainer.append(toggleContainer, ul, burgerMenu);
