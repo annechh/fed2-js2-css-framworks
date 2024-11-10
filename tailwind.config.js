@@ -7,10 +7,12 @@ export default {
       colors: {
         purpleDark: '#150516',
         purpleLight: '#311C36',
+
         white: '#F5F5F5',
         whiteFaded: 'rgba(245, 245, 245, 0.25)',
+        blackFaded: 'rgba(0, 0, 0, 0.25)',
 
-        violetLight: '#5B4B5C',
+        violetLight: '#604362',
         violetDark: '#2B1E2C',
       },
       dropShadow: {
