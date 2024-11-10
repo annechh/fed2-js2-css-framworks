@@ -25,6 +25,13 @@
   @apply bg-black hover:bg-red-700 text-white md:font-bold md:text-lg px-4 py-2 md:px-8 md:py-4 rounded-full;
 }
 
+.btn-pagination{
+  @apply 
+  bg-purpleLight hover:bg-white hover:text-purpleDark 
+  dark:bg-violetLight dark:hover:bg-violetDark dark:text-white 
+  py-2 px-3 rounded-full whitespace-nowrap text-xs md:text-base   
+}
+
 .auth-link {
   @apply text-center px-4 py-2 md:px-8 md:py-4 hover:underline
 }
