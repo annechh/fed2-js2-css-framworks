@@ -88,8 +88,31 @@ export function buildSinglePost(postData) {
     className: ['flex', 'w-full', 'gap-2', 'justify-between', 'flex-wrap'],
   });
 
+  const reactContainer = createDivElement({
+    className: [
+      'flex',
+      'justify-between',
+      'items-center',
+      'px-4',
+      'py-2',
+      'md:px-8',
+      'md:py-4',
+      'bg-violetLight',
+      'rounded-full',
+    ],
+  });
+
+  const reactEmoji = createElementButton({
+    textContent: '👍',
+    className: ['text-base', 'md:text-2xl'],
+  });
+
+  const reactCount = document.createElement('span');
+  reactCount.textContent = postData._count.reactions || '';
+  reactCount.classList.add('text-white', 'font-bold');
+
   const buttonContainer = createDivElement({
-    className: ['flex', 'gap-5', 'w-full', 'justify-between', 'md:justify-end'],
+    className: ['flex', 'gap-2', 'md:gap-5', 'justify-end'],
   });
 
   const deleteButton = createElementButton({
@@ -118,8 +141,10 @@ export function buildSinglePost(postData) {
   });
 
   buttonContainer.append(editButton, deleteButton);
+  reactContainer.append(reactEmoji, reactCount);
+  reactButtonContainer.append(reactContainer, buttonContainer);
   textInnerContainer.append(
-    buttonContainer,
+    reactButtonContainer,
     postTitle,
     textAuthorContainer,
     postTags,
