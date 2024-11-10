@@ -30,7 +30,14 @@ export function labelInputDivStyle() {
   });
 }
 
-export function labelStyle() {}
+export function labelStyle() {
+  const targetLabel = document.querySelectorAll('.label');
+  console.log(targetLabel);
+
+  targetLabel.forEach((input) => {
+    input.classList.add('text-white', 'md:text-xl');
+  });
+}
 
 export function inputStyle() {
   const targetInput = document.querySelectorAll('.input');
