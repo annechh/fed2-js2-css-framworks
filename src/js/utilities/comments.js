@@ -37,10 +37,23 @@ export function renderComments(comments) {
         className: [],
       });
 
+      const avatarContainer = createDivElement({
+        className: [
+          'flex',
+          'items-center',
+          'justify-center',
+          'h-6',
+          'w-6',
+          'rounded-full',
+          'overflow-hidden',
+          'aspect-square',
+        ],
+      });
+
       const userAvatar = createImageElement({
         src: comment.author.avatar.url,
         alt: comment.author.avatar.alt,
-        className: ['max-h-6', 'rounded-full'],
+        className: ['w-full', 'h-full', 'object-cover'],
       });
 
       const commentText = createElementParagraph({
@@ -48,7 +61,8 @@ export function renderComments(comments) {
         className: ['mx-4', 'pb-2'],
       });
 
-      authorContainer.append(userAvatar, commentAuthor);
+      avatarContainer.appendChild(userAvatar);
+      authorContainer.append(avatarContainer, commentAuthor);
       commentCards.append(authorContainer, commentText);
       commentsContainer.append(commentCards);
     });
