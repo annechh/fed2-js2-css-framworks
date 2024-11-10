@@ -75,7 +75,18 @@ export function buildSinglePost(postData) {
   });
 
   const postTags = createElementParagraph({
-    textContent: formatTags(postData.tags),
+    className: ['flex', 'flex-wrap', 'gap-2', 'text-white', 'dark:text-black'],
+  });
+
+  console.log('postData.tags:', postData.tags);
+
+  const tagElements = formatTags(postData.tags);
+  if (tagElements.length > 0) {
+    tagElements.forEach((tagElement) => postTags.appendChild(tagElement));
+  }
+
+  const reactButtonContainer = createDivElement({
+    className: ['flex', 'w-full', 'gap-2', 'justify-between', 'flex-wrap'],
   });
 
   const buttonContainer = createDivElement({
