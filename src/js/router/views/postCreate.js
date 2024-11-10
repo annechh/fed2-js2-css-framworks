@@ -4,6 +4,12 @@ import { setLogoutListener } from '../../ui/global/logout';
 import { buildNavBar } from '../../ui/dom/nav';
 import { darkLightModes } from '../../ui/global/darkLightMode';
 import { footerStyle } from '../../ui/dom/footer';
+import {
+  formDivWrapper,
+  formStyle,
+  inputStyle,
+  labelInputDivStyle,
+} from '../../ui/dom/styleElements';
 
 /**
  * Adds event listener to the create post form to handle form submission.
@@ -22,3 +28,7 @@ setLogoutListener();
 authGuard();
 darkLightModes();
 footerStyle();
+formStyle();
+labelInputDivStyle();
+inputStyle();
+formDivWrapper();

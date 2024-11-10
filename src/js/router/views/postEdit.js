@@ -5,6 +5,12 @@ import { readSinglePost } from '../../api/post/read';
 import { buildNavBar } from '../../ui/dom/nav';
 import { darkLightModes } from '../../ui/global/darkLightMode';
 import { footerStyle } from '../../ui/dom/footer';
+import {
+  formDivWrapper,
+  formStyle,
+  inputStyle,
+  labelInputDivStyle,
+} from '../../ui/dom/styleElements';
 
 /**
  * Fetches the data for a single post and populates the form fields with the retrieved information.
@@ -51,4 +57,8 @@ setLogoutListener();
 authGuard();
 darkLightModes();
 footerStyle();
+formStyle();
+labelInputDivStyle();
+inputStyle();
+formDivWrapper();
 await viewFormData();

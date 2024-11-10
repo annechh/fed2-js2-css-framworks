@@ -1,7 +1,12 @@
 import { onLogin } from '../../ui/auth/login';
 import { footerStyle } from '../../ui/dom/footer';
 import { buildNavBar } from '../../ui/dom/nav';
-import { formStyle, labelInputDivStyle } from '../../ui/dom/styleElements';
+import {
+  formDivWrapper,
+  formStyle,
+  inputStyle,
+  labelInputDivStyle,
+} from '../../ui/dom/styleElements';
 import { darkLightModes } from '../../ui/global/darkLightMode';
 
 /**
@@ -21,3 +26,5 @@ darkLightModes();
 footerStyle();
 formStyle();
 labelInputDivStyle();
+inputStyle();
+formDivWrapper();
