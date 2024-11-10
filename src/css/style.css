@@ -5,30 +5,39 @@
 @tailwind utilities;
 
 .btn-lightPurple {
-  @apply bg-purpleLight hover:bg-green-700  text-white 
-  dark:bg-violetLight hover:dark:bg-green-700 
+  @apply 
+  bg-purpleLight dark:bg-violetLight 
+  text-white 
+  /* active:text-white active:dark:text-white */
+  active:bg-green-700  active:dark:bg-green-700
+  md:hover:bg-green-700 md:hover:dark:bg-green-700
   font-bold md:text-lg px-4 py-2 md:px-8 md:py-4 rounded-full;
 }
 
 .btn-darkPurple {
   @apply 
-  bg-purpleDark hover:bg-green-700 hover:text-purpleDark  text-white
-  dark:bg-violetDark hover:dark:bg-green-700 
+  bg-purpleDark dark:bg-violetDark
+  text-white
+  active:bg-green-700 active:text-black 
+  md:hover:bg-green-700 md:hover:dark:bg-green-700 md:hover:text-purpleDark
+  
   font-bold md:text-lg px-4 py-2 md:px-8 md:py-4 rounded-full;
 }
 
-.btn-white {
-  @apply bg-white hover:bg-black hover:text-white text-purpleDark md:font-bold md:text-lg px-4 py-2 md:px-8 md:py-4 rounded-full;
-}
-
 .btn-delete {
-  @apply bg-black hover:bg-red-700 text-white md:font-bold md:text-lg px-4 py-2 md:px-8 md:py-4 rounded-full;
+  @apply 
+  bg-black md:hover:bg-red-700 text-white
+  active:bg-red-700 active:dark:bg-red-700
+  md:font-bold md:text-lg px-4 py-2 md:px-8 md:py-4 rounded-full;
 }
 
 .btn-pagination{
   @apply 
-  bg-purpleLight hover:bg-white hover:text-purpleDark 
-  dark:bg-violetLight dark:hover:bg-violetDark dark:text-white 
+  text-white
+  bg-purpleLight dark:bg-violetLight 
+  active:bg-white active:text-purpleDark active:dark:bg-violetDark active:dark:text-white
+  md:hover:bg-white md:hover:text-purpleDark 
+  md:dark:hover:bg-violetDark md:dark:hover:text-white
   py-2 px-3 rounded-full whitespace-nowrap text-xs md:text-base   
 }
 
