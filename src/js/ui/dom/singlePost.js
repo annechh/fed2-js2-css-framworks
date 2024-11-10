@@ -147,7 +147,22 @@ export function buildSinglePost(postData) {
 
   const deleteButton = createElementButton({
     id: 'deletePostButton',
-    className: ['btn', 'btn-delete'],
+    className: [
+      'btn',
+      'btn-delete',
+      'text-white',
+      'bg-black',
+      'md:hover:bg-red-700',
+      'font-bold',
+      'md:text-lg',
+      'px-4',
+      'py-2',
+      'md:px-8',
+      'md:py-4',
+      'rounded-full',
+      'active:bg-red-700',
+      'active:dark:bg-red-700',
+    ],
     textContent: 'Delete',
   });
   deleteButton.addEventListener('click', () => onDeletePost());
