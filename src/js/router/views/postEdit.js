@@ -10,6 +10,7 @@ import {
   formStyle,
   inputStyle,
   labelInputDivStyle,
+  labelStyle,
 } from '../../ui/dom/styleElements';
 
 /**
@@ -59,6 +60,7 @@ darkLightModes();
 footerStyle();
 formStyle();
 labelInputDivStyle();
+labelStyle();
 inputStyle();
 formDivWrapper();
 await viewFormData();
