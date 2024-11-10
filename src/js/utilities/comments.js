@@ -15,7 +15,7 @@ export function renderComments(comments) {
   if (comments && comments.length > 0) {
     comments.forEach((comment) => {
       const commentCards = createDivElement({
-        className: ['bg-purpleLight', 'rounded'],
+        className: ['bg-purpleLight', 'dark:bg-violetLight', 'rounded'],
       });
 
       const authorContainer = createDivElement({

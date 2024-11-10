@@ -65,7 +65,9 @@ export function buildSinglePost(postData) {
       'md:text-lg',
       'border-b',
       'border-whiteFaded',
+      'dark:border-blackFaded',
       'pb-2',
+      'dark:text-black',
     ],
     textContent: postData.body,
   });
