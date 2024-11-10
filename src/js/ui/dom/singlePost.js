@@ -13,9 +13,6 @@ import {
 export function buildSinglePost(postData) {
   const renderPost = document.getElementById('post');
 
-  const postTitleHeading = document.getElementById('postTitle');
-  postTitleHeading.textContent = postData.title;
-
   const imageContainer = createDivElement({
     className: [
       'max-h-[400px]',
