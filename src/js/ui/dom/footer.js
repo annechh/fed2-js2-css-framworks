@@ -19,8 +19,8 @@ export function footerStyle() {
     'bg-purpleLight',
     'dark:bg-violetLight',
     'h-16',
-    'w-full',
-    'mt-10'
+    'w-full'
+    // 'mt-10'
     // 'fixed',
     // 'bottom-0',
     // 'hidden'
