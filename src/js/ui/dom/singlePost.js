@@ -9,6 +9,7 @@ import {
   createElementParagraph,
   createElementButton,
 } from './domElements';
+import { applyLongWordClass } from '../../utilities/breakLongWords';
 
 export function buildSinglePost(postData) {
   const renderPost = document.getElementById('post');
@@ -55,13 +56,13 @@ export function buildSinglePost(postData) {
 
   const postTitle = createHeadingElement({
     className: [
+      'post-title',
       'w-full',
       'text-xl',
       'md:text-3xl',
       'font-bold',
       'max-w-[800px]',
       'dark:text-black',
-      'break-all',
     ],
     htmlElement: 'h1',
     textContent: postData.title,
@@ -73,6 +74,7 @@ export function buildSinglePost(postData) {
 
   const postText = createElementParagraph({
     className: [
+      'post-text',
       'text-base',
       'md:text-xl',
       'border-b',
@@ -80,10 +82,13 @@ export function buildSinglePost(postData) {
       'dark:border-blackFaded',
       'pb-2',
       'dark:text-black',
-      'break-all',
     ],
     textContent: postData.body,
   });
+
+  applyLongWordClass(postTitle);
+  applyLongWordClass(postText);
+
   const postAuthor = createElementParagraph({
     textContent: 'Post by: ' + postData.author.name,
     className: [

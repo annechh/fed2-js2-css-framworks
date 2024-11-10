@@ -18,6 +18,19 @@ export default {
       dropShadow: {
         white: '0 5px 10px rgba(245, 245, 245, 15)',
       },
+
+      typography: {
+        DEFAULT: {
+          css: {
+            '.overflow-wrap-anywhere': {
+              overflowWrap: 'anywhere',
+            },
+            '.hyphens-auto': {
+              hyphens: 'auto',
+            },
+          },
+        },
+      },
     },
   },
   plugins: [],
