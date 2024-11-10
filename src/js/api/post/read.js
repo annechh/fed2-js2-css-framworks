@@ -71,11 +71,18 @@ export async function readSinglePost() {
  * console.log(query); // "limit=10&page=2&_author=true&tag=tech"
  */
 
-function buildQueryParams(limit = 12, page = 1, tag, _author) {
+function buildQueryParams(
+  limit = 12,
+  page = 1,
+  tag,
+  _author,
+  _reactions = true
+) {
   const queryParams = new URLSearchParams({
     limit: limit.toString(),
     page: page.toString(),
     _author: true,
+    _reactions: _reactions.toString(),
   });
   if (tag) {
     queryParams.append('tag', tag);
@@ -106,10 +113,10 @@ function buildQueryParams(limit = 12, page = 1, tag, _author) {
  * console.log(meta);  // Pagination metadata
  */
 
-export async function readPosts(limit, page, tag, _author) {
+export async function readPosts(limit, page, tag, _author, _reactions) {
   showLoader();
   try {
-    const queryParam = buildQueryParams(limit, page, tag, _author);
+    const queryParam = buildQueryParams(limit, page, tag, _author, _reactions);
 
     const response = await fetch(`${API_SOCIAL_POSTS}?${queryParam}`, {
       method: 'GET',

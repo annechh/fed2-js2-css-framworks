@@ -4,42 +4,54 @@
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noroff FED2 JS2 CA</title>
+    
     <script type="module" src="/src/app.js"></script>
+    <script src="https://kit.fontawesome.com/aacfbda896.js" crossorigin="anonymous"></script>
+
+    <title>Edit Post - CSS frameworks CA</title>
   </head>
 
-  <body>
-    <header class="header"></header>
-    <h1>Edit Post</h1>
+  <body class="text-white bg-purpleDark dark:bg-white w-screen min-h-screen flex flex-col">
+    <header class="bg-purpleLight md:h-20 h-12 flex flex-col justify-center items-center px-4 md:px-8 w-full"></header>
+    
+    <main class="flex flex-grow w-full min-h-screen justify-center items-center my-10">
+      <div class="form-div-wrapper">
+        <h1 class="mb-10 md:text-2xl font-semibold">Edit Post</h1>
 
-    <form name="editPost" id="editPostForm">
-      <div>
-        <label for="postTitle">Title</label>
-        <input type="text" name="postTitle" id="postTitle" required/>
-      </div>
+        <form class="form" name="editPost" id="editPostForm">
 
-      <div>
-        <label for="postText">Story</label>
-        <textarea name="postText" id="postText"></textarea>
-      </div>
+          <div class="label-input-div">
+            <label class="label" for="postTitle">Title *</label>
+            <input class="input placeholder:text-xs placeholder:italic" type="text" name="postTitle" id="postTitle" placeholder="Title of post" required/>
+          </div>
+  
+          <div class="label-input-div">
+            <label class="label" for="postText">Story</label>
+            <textarea class="rounded bg-white text-black font-semibold w-full md:text-lg h-36 md:h-44 px-4 py-2 placeholder:text-xs md:placeholder:text-sm placeholder:italic" name="postText" id="postText" placeholder="Write a text for the post"></textarea>
+          </div>
+  
+          <div class="label-input-div">
+            <label class="label" for="tags">Tags (separate with comma)</label>
+            <input class="input placeholder:text-xs placeholder:italic" type="text" name="tags" id="tags" placeholder="Example: tag1, tag2, tag3"/>
+          </div>
+  
+          <div class="label-input-div">
+            <label class="label" for="imageUrl">Image Url *</label>
+            <input class="input placeholder:text-xs placeholder:italic" type="url" name="image" id="imageUrl" placeholder="Add an image url" required/>
+          </div>
+  
+          <div class="label-input-div">
+            <label class="label" for="imageAlt">Image description</label>
+            <input class="input placeholder:text-xs placeholder:italic" type="text" name="alt" id="imageAlt" placeholder="Short description of the image"/>
+          </div>
 
-      <div>
-        <label for="tags">Tags (separate with comma)</label>
-        <input type="text" name="tags" id="tags"/>
-      </div>
+          <button class="btn-darkPurple mt-5 mx-4" id="savePostButton">Save Post</button>
 
-      <div>
-        <label for="imageUrl">Image Url</label>
-        <input type="url" name="image" id="imageUrl"/>
-      </div>
+        </form>
 
-      <div>
-        <label for="imageAlt">Image description</label>
-        <input type="text" name="alt" id="imageAlt"/>
-      </div>
-
-      <button class="btn" id="savePostButton">Save Post</button>
-
-    </form>
+      </main>
+    </div> 
+    
+    <footer class="footer"></footer>
   </body>
 </html>

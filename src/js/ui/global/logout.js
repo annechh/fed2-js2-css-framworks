@@ -5,4 +5,9 @@ export function setLogoutListener() {
   logoutButton.addEventListener('click', () => {
     onLogout();
   });
+
+  const mobileLogoutButton = document.getElementById('mobileLogoutButton');
+  mobileLogoutButton.addEventListener('click', () => {
+    onLogout();
+  });
 }

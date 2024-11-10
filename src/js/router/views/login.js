@@ -1,5 +1,13 @@
 import { onLogin } from '../../ui/auth/login';
+import { footerStyle } from '../../ui/dom/footer';
 import { buildNavBar } from '../../ui/dom/nav';
+import {
+  formDivWrapper,
+  formStyle,
+  inputStyle,
+  labelInputDivStyle,
+} from '../../ui/dom/styleElements';
+import { darkLightModes } from '../../ui/global/darkLightMode';
 
 /**
  * Adds event listener to the login form to handle form submission.
@@ -14,3 +22,9 @@ const form = document.forms.login;
 form.addEventListener('submit', onLogin);
 
 buildNavBar();
+darkLightModes();
+footerStyle();
+formStyle();
+labelInputDivStyle();
+inputStyle();
+formDivWrapper();

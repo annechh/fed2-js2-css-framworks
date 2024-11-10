@@ -16,9 +16,11 @@ import { deletePost } from '../../api/post/delete';
  */
 
 export async function onDeletePost(id) {
-  const confirmDelete = confirm('Are you sure you want to delete this post?');
+  setTimeout(async () => {
+    const confirmDelete = confirm('Are you sure you want to delete this post?');
 
-  if (confirmDelete) {
-    await deletePost(id);
-  }
+    if (confirmDelete) {
+      await deletePost(id);
+    }
+  }, 100);
 }

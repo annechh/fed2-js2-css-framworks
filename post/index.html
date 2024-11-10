@@ -4,17 +4,24 @@
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noroff FED2 JS2 CA</title>
+    
     <script type="module" src="/src/app.js"></script>
+    <script src="https://kit.fontawesome.com/aacfbda896.js" crossorigin="anonymous"></script>
+
+    <title>Post - CSS frameworks CA</title>
   </head>
-  <body>
-    <header class="header"></header>
+  <body class="text-white bg-purpleDark dark:bg-white w-screen min-h-screen flex flex-col">
+    <header></header>
 
-    <h1>Post Page</h1>
+    <main class="flex flex-grow w-full justify-center items-center my-10">
+      <div class="flex flex-col items-center">
+  
+        <span class="loader" id="loader"></span>
+    
+        <div class="flex flex-col items-center max-w-[1280px] gap-5" id="post"></div>      
+      </div>
+    </main>
 
-    <span class="loader" id="loader"></span>
-
-    <div id="post" class="single-post"></div>
-
+    <footer class="footer"></footer>
   </body>
 </html>

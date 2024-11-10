@@ -1,138 +1,48 @@
-@import url(_reset.css);
-@import url(postCards.css);
 @import url(loader.css);
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-body {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    background: #2c2c2c;
-    margin-bottom: 50px;
+.btn-lightPurple {
+  @apply 
+  text-white 
+  bg-purpleLight dark:bg-violetLight 
+  active:bg-green-700  active:dark:bg-green-700
+  md:hover:bg-green-700 md:hover:dark:bg-green-700
+  font-bold md:text-lg px-4 py-2 md:px-8 md:py-4 rounded-full;
 }
 
-.btn {
-    margin: 25px;
-    border-radius: 5px;
+.btn-darkPurple {
+  @apply 
+  text-white
+  bg-purpleDark dark:bg-violetDark
+  active:bg-green-700 active:text-black 
+  md:hover:bg-green-700 md:hover:dark:bg-green-700 md:hover:text-purpleDark
+  font-bold md:text-lg px-4 py-2 md:px-8 md:py-4 rounded-full;
 }
 
-.pagination {
-    display: flex;
-}
-
-a, h1 {
-    color: white;
-}
-
-
-/* Forms */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-form div {
-    display: flex;
-    flex-direction: column;
-}
-
-form label{
-    font-size: 18px;
-    color: white;
-}
-
-form input {
-    height: 30px;
-    border: 1px solid black;
-    border-radius: 5px;
-}
-
-textarea {
-    height: 100px;
-    border-radius: 5px;
+.btn-delete {
+  @apply 
+  text-white
+  bg-black 
+  md:hover:bg-red-700 
+  active:bg-red-700 active:dark:bg-red-700
+  md:font-bold md:text-lg px-4 py-2 md:px-8 md:py-4 rounded-full;
 }
 
 
-/* Single post */
-.single-post {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 25px;
-    color: white;
+
+.btn-pagination{
+  @apply 
+  text-white
+  bg-purpleLight dark:bg-violetLight 
+  active:bg-white active:text-purpleDark active:dark:bg-violetDark active:dark:text-white
+  md:hover:bg-white md:hover:text-purpleDark 
+  md:dark:hover:bg-violetDark md:dark:hover:text-white
+  py-2 px-3 rounded-full whitespace-nowrap text-xs md:text-base   
 }
 
-.single-image-container{
-    max-width: 800px;
-    width: 100%;
+.auth-link {
+  @apply text-center px-4 py-2 md:px-8 md:py-4 hover:underline
 }
-
-.single-image-container img {
-    width: 100%;
-    object-fit: cover;
-}
-
-.singlePost-heading {
-    font-size: 30px;
-}
-
-.singlePost-text {
-    font-size: 18px;
-}
-
-.singlePostButtons {
-    display: flex;
-}
-
-/* HEADER - NAV bar */
-
-header {
-    width: 100%;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav-logo {
-    max-height: 40px;
-}
-
-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-}
-
-nav ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 20px;
-    color: white;
-    padding: 0;
-}
-
-nav a {
-    font-size: 20px;
-    text-decoration: none;
-    cursor: pointer;    
-}
-
-.nav-buttons {
-    display: flex;
-    justify-self: end;
-    cursor: pointer;
-}
-
-.nav-btn {
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-

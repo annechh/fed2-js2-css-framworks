@@ -4,37 +4,50 @@
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noroff FED2 JS2 CA</title>
+    
     <script type="module" src="/src/app.js"></script>
+    <script src="https://kit.fontawesome.com/aacfbda896.js" crossorigin="anonymous"></script>
+
+    <title>Login - CSS frameworks CA</title>
   </head>
 
-  <body>
-    <header class="header"></header>
-    <h1>Login</h1>
-    <form name="login">
-      <div>
-        <label for="email">Email</label>
-        <input 
-        id="email" 
-        type="email" 
-        name="email" 
-        pattern="^[\w\-.]+@(stud\.)?noroff\.no$" 
-        title="Please enter a valid @noroff.no or @stud.noroff.no address" 
-        required/>
-      </div>
+  <body class="text-white bg-purpleDark dark:bg-white flex flex-col items-center min-h-screen">
+    <header></header>
 
-      <div>
-        <label for="password">Password</label>
-        <input 
-        type="password" 
-        name="password" 
-        id="password" 
-        minlength="8" 
-        required />
-      </div>
+    <main class="flex flex-grow w-full justify-center items-center">
+      <div class="form-div-wrapper">
+        <h1 class="text-center text-xl sm:text-2xl md:text-3xl font-semibold px-4">Login</h1>
+        
+        <form class="form" name="login">
 
-      <a href="/auth/register/">Register</a>
-      <button>Login</button>
-    </form>
+          <div class="label-input-div">
+            <label for="email">Email</label>
+            <input class="input" 
+            id="email" 
+            type="email" 
+            name="email" 
+            pattern="^[\w\-.]+@(stud\.)?noroff\.no$" 
+            title="Please enter a valid @noroff.no or @stud.noroff.no address" 
+            required/>
+          </div>
+    
+          <div class="label-input-div">
+            <label for="password">Password</label>
+            <input class="input" 
+            type="password" 
+            name="password" 
+            id="password" 
+            minlength="8" 
+            required />
+          </div>
+    
+          <button class="btn-darkPurple mx-4 mt-4">Login</button>
+          <a class="auth-link" href="/auth/register/">Go to Register</a>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer"></footer>
+    
   </body>
 </html>
