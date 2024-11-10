@@ -47,7 +47,7 @@ export function buildSinglePost(postData) {
       'flex',
       'flex-col',
       'items-start',
-      'gap-5',
+      'gap-6',
       'items-center',
       'mx-4',
     ],
@@ -67,7 +67,7 @@ export function buildSinglePost(postData) {
   });
 
   const textAuthorContainer = createDivElement({
-    className: ['max-w-[800px]', 'w-full'],
+    className: ['max-w-[800px]', 'w-full', 'pb-4'],
   });
 
   const postText = createElementParagraph({
@@ -95,7 +95,14 @@ export function buildSinglePost(postData) {
   });
 
   const postTags = createElementParagraph({
-    className: ['flex', 'flex-wrap', 'gap-2', 'text-white', 'dark:text-black'],
+    className: [
+      'flex',
+      'flex-wrap',
+      'gap-2',
+      'text-white',
+      'dark:text-black',
+      'pb-4',
+    ],
   });
 
   console.log('postData.tags:', postData.tags);
